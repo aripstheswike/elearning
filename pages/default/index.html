@@ -1,0 +1,16 @@
+{{define "default/index"}}
+{{template "template/head" .}}
+<div class="wrapper">
+    {{template "template/sidebar" .}}
+    <div class="content">
+        {{template "template/header"}}
+        <div class="card border-primary w-25 mx-auto mt-5">
+            <h3 class="card-header bg-primary text-white">Bandros GO</h3>
+            <div class="card-body">
+                Selamat datang di admin bandros! {{.method}}
+            </div>
+        </div>
+    </div>
+</div>
+{{template "template/foot" .}}
+{{end}}

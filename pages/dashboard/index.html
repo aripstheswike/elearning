@@ -1,0 +1,137 @@
+{{define "dashboard/index"}}
+{{template "template/head" .}}
+{{template "template/sidebar" .}}
+{{template "template/header"}}
+<!-- ########## START: MAIN PANEL ########## -->
+<div class="br-mainpanel">
+    <div class="br-pageheader pd-y-15 pd-l-20">
+        <nav class="breadcrumb pd-0 mg-0 tx-12">
+            <span class="breadcrumb-item active">Dashboard</span>
+        </nav>
+    </div><!-- br-pageheader -->
+
+    <div class="br-pagebody">
+        <div class="br-section-wrapper">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Data Buku</h3>
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-primary" id="tambahbuku"><i class="ion-ios-plus mg-r-10"></i>Tambah
+                        Buku</button>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table" id="tblBuku">
+                        <thead>
+                            <th>No</th>
+                            <th>NIM Author</th>
+                            <th>Nama Author</th>
+                            <th>Jenis</th>
+                            <th>Judul Buku</th>
+                            <th>Action</th>
+                        </thead>
+                        <tr>
+                            <td>1</td>
+                            <td>10112773</td>
+                            <td>Muhammad Arif Nasrulloh</td>
+                            <td>Jurnal</td>
+                            <td>Dummy Book For Dummies</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <a id="btnViewBook" class="btn btn-default btn-primary"><span
+                                            class="menu-item-icon icon ion-ios-eye tx-24"
+                                            style="color:white"></span></a>
+                                    <a id="btnFilter" class="btn btn-default btn-danger"><span
+                                            class="menu-item-icon icon ion-ios-filter tx-24"
+                                            style="color:white"></span></a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div><!-- br-section-wrapper -->
+    </div><!-- br-pagebody -->
+    {{ template "template/footer"}}
+</div><!-- br-mainpanel -->
+<!-- ########## END: MAIN PANEL ########## -->
+
+
+
+<div id="modaltambahbuku" class="modal fade " style="display: none;" aria-hidden="true">
+    <div class="modal-dialog w-100" role="document" style="max-width: 90%">
+        <div class="modal-content tx-size-sm">
+            <div class="modal-body tx-center pd-y-20 pd-x-20">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <div class="row">
+                    <div class="col-md-5 tx-center" style="background-color: teal;">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <select name="jenisfile" id="jenisfile" class="form-control">
+                                    <option value="x">Pilih jenis file</option>
+                                    <option value="0">Skripsi</option>
+                                    <option value="1">Proceeding</option>
+                                    <option value="2">Jurnal</option>
+                                    <option value="3">Makalah</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="judul" id="" class="form-control" placeholder="Judul ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="author" id="" class="form-control" placeholder="Nama Penulis">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 form-group">
+                                <input type="text" name="tahun" id="" class="form-control" placeholder="tahun">
+                            </div>
+                            <div class="col-md-8 form-group">
+                                <select name="jenisfile" id="jenisfile" class="form-control">
+                                    <option value="x">Pilih Bulan</option>
+                                    <option value="1">Januari</option>
+                                    <option value="2">Februari</option>
+                                    <option value="3">Maret</option>
+                                    <option value="4">April</option>
+                                    <option value="5">Mei</option>
+                                    <option value="6">Juni</option>
+                                    <option value="7">Juli</option>
+                                    <option value="8">Agustus</option>
+                                    <option value="9">September</option>
+                                    <option value="10">Oktober</option>
+                                    <option value="11">November</option>
+                                    <option value="12">Desember</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="text" name="tagpencarian" id="tagpencarian" class="form-control" data-role="tagsinput" placeholder="Tag Pencarian" style="width: 100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- modal-body -->
+        </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+</div>
+
+{{template "template/foot" .}}
+{{end}}

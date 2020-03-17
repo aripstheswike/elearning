@@ -1,0 +1,19 @@
+{{- define "template/foot"}}
+
+<script src="/asset/plugin/jquery/jquery.js"></script>
+<script src="/asset/plugin/jquery-ui/jquery-ui.js"></script>
+<script src="/asset/plugin/moment/moment.min.js" ></script>
+<script src="/asset/plugin/bracket/script.js"></script>
+<script src="/asset/js/script.min.js" ></script>
+
+
+{{- range $i, $v := .css_footer }}
+    <link href="{{$v}}.css" rel="stylesheet" />
+{{- end }}
+
+{{- range $i, $v := .js }}
+    <script src="{{$v}}.js" ></script>
+{{- end }}
+</body>
+</html>
+{{- end}}

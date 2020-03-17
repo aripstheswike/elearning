@@ -1,0 +1,28 @@
+{{ define "template/menu"}}
+
+<div class="top-header">
+    <div class="container-fluid limited">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-between">
+                    <nav class="nav mr-auto">
+                        <a class="nav-link d-none d-sm-block" href="#"><i class="fa fa-info-circle"></i> DROPSHIP PRODUK INDONESIA </a>
+                        <a class="nav-link d-none d-sm-block" href="tel:+6281312123226"><i class="fa fa-phone"></i> 0813-1212-3226 </a>
+
+                    </nav>
+                    <nav class="nav ml-auto">
+                    {{if not .login}}
+                        <a id="login" class="nav-link" href="/" title="login" data-toggle="tooltip"><i class="fa fa-user"></i> Login</a>
+                    {{else}}
+                        <a id="reg" class="nav-link" href="/dashboard" title="Dashboard" data-toggle="tooltip"><i class="fa fa-columns"></i></a>
+                        <a id="reg" class="nav-link" href="/logout" title="logout" data-toggle="tooltip"><i class="fa fa-power-off"></i></a>
+                    {{end}}
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{end}}

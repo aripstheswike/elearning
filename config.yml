@@ -1,0 +1,17 @@
+config:
+- mysqlHost: tcp(127.0.0.1:3306)
+  mysqlUser: root
+  mysqlPwd: ''
+  mysqlDb: elearning
+  mongoHost: localhost:27017
+  mongUser: root
+  mongoPwd: ''
+  mongoDb: admin
+  baseUrl: http://localhost
+  ipAddress: ::1
+  sessionName: admin_starter
+  sessionKey: admin_starter_123
+  portHost: 8081
+  env: dev
+  jwtName: jwt_admin_starter
+  jwtKey: dicoding
